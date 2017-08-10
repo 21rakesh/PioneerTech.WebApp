@@ -1,0 +1,4 @@
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTestConsultancySystem\PioneerDataAccess\bin\Debug\PioneerDataAccess.dll
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTestConsultancySystem\PioneerDataAccess\bin\Debug\PioneerDataAccess.pdb
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTestConsultancySystem\PioneerDataAccess\obj\Debug\PioneerDataAccess.dll
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTestConsultancySystem\PioneerDataAccess\obj\Debug\PioneerDataAccess.pdb

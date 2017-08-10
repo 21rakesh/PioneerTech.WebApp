@@ -1,0 +1,4 @@
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTestConsultancySystem\PioneerTestModels\bin\Debug\PioneerTestModels.dll
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTestConsultancySystem\PioneerTestModels\bin\Debug\PioneerTestModels.pdb
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTestConsultancySystem\PioneerTestModels\obj\Debug\PioneerTestModels.dll
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTestConsultancySystem\PioneerTestModels\obj\Debug\PioneerTestModels.pdb
