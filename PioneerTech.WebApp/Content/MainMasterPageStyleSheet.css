@@ -1,0 +1,20 @@
+﻿.Header{
+    height:20%;
+    width:100%;
+    background-color:grey;
+}
+.Footer{
+    height:20%;
+    width:100%;
+    background-color:grey;
+}
+.NavigationPanel{
+    height:60%;
+    width:20%;
+    background-color:orange;
+}
+.Content{
+    height:60%;
+    width:80%;
+    background-color:white;
+}
