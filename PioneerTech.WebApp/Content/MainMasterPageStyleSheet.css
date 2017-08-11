@@ -1,20 +1,64 @@
 ﻿.Header{
     height:20%;
     width:100%;
-    background-color:grey;
+    background-color:gray;
+    position:fixed;
+    top:0px;
+}
+body{
+
 }
 .Footer{
     height:20%;
     width:100%;
-    background-color:grey;
+    background-color:gray;
+    position:fixed;
+    bottom: 0px;
 }
 .NavigationPanel{
     height:60%;
     width:20%;
     background-color:orange;
+    position:fixed;
+    top: 20%;
 }
 .Content{
+    top:20%;
     height:60%;
-    width:80%;
+    width:75%;
     background-color:white;
+    left:25%;
+    position:fixed;
+
 }
+h1{color:orange;
+   text-align:left;
+   bottom:0%;
+
+}
+nav{
+   text-align:left;
+   font-size:200%;
+   color:black;
+}
+.menu ul {
+    border-bottom: 1px solid gray;
+}
+
+    .menu ul li {
+        border: 1px solid white;
+        background-color: gray;
+        text-decoration: none;
+        padding: 3px;
+        margin: 3px;
+        font-size:200%
+    }
+
+.menu ul li a {
+  color: White;
+  
+ }
+
+.menu ul li a:hover {
+font-weight: bold;
+ }
