@@ -15,13 +15,13 @@ namespace PioneerTech.WebApp.UI
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!IsPostBack)
-            { 
+            {
             CompanyDataAccess obj = new CompanyDataAccess();
             List<int> EmpIDList = obj.GetEmployeeID();
             int i = 0;
             foreach (int EmpID in EmpIDList)
             {
-                EmployeeIDDropDownList.Items.Insert(i, new ListItem(EmpID.ToString(), EmpID.ToString()));
+                EmployeeIDDropDownList.Items.Insert(i, new ListItem(EmpID.ToString()));
                 i++;
             }
             }

@@ -13,40 +13,58 @@ namespace PioneerTech.WebApp.UI {
     public partial class EmployeeDetails {
         
         /// <summary>
-        /// FirstNameLabel control.
+        /// EmployeeIDLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label FirstNameLabel;
+        protected global::System.Web.UI.WebControls.Label EmployeeIDLabel;
         
         /// <summary>
-        /// FirstNameTextBox control.
+        /// EmployeeIDDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FirstNameTextBox;
+        protected global::System.Web.UI.WebControls.DropDownList EmployeeIDDropDownList;
         
         /// <summary>
-        /// LastNameLabel control.
+        /// First_NameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LastNameLabel;
+        protected global::System.Web.UI.WebControls.Label First_NameLabel;
         
         /// <summary>
-        /// LastNameTextBox control.
+        /// First_NameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox LastNameTextBox;
+        protected global::System.Web.UI.WebControls.TextBox First_NameTextBox;
+        
+        /// <summary>
+        /// Last_NameLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Last_NameLabel;
+        
+        /// <summary>
+        /// Last_NameTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Last_NameTextBox;
         
         /// <summary>
         /// EmailLabel control.
@@ -67,22 +85,22 @@ namespace PioneerTech.WebApp.UI {
         protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
         
         /// <summary>
-        /// MobileNumberLabel control.
+        /// Mobile_NumberLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label MobileNumberLabel;
+        protected global::System.Web.UI.WebControls.Label Mobile_NumberLabel;
         
         /// <summary>
-        /// MobileNumberTextBox control.
+        /// Mobile_NumberTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MobileNumberTextBox;
+        protected global::System.Web.UI.WebControls.TextBox Mobile_NumberTextBox;
         
         /// <summary>
         /// AlternateMobileNumberLabel control.
@@ -139,40 +157,40 @@ namespace PioneerTech.WebApp.UI {
         protected global::System.Web.UI.WebControls.TextBox Address2TextBox;
         
         /// <summary>
-        /// CurrentCountryLabel control.
+        /// Current_CountryLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CurrentCountryLabel;
+        protected global::System.Web.UI.WebControls.Label Current_CountryLabel;
         
         /// <summary>
-        /// CurrentCountryTextBox control.
+        /// Current_CountryTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CurrentCountryTextBox;
+        protected global::System.Web.UI.WebControls.TextBox Current_CountryTextBox;
         
         /// <summary>
-        /// HomeCountryLabel control.
+        /// Home_CountryLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label HomeCountryLabel;
+        protected global::System.Web.UI.WebControls.Label Home_CountryLabel;
         
         /// <summary>
-        /// HomeCountryTextBox control.
+        /// Home_CountryTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox HomeCountryTextBox;
+        protected global::System.Web.UI.WebControls.TextBox Home_CountryTextBox;
         
         /// <summary>
         /// ZipCodeLabel control.

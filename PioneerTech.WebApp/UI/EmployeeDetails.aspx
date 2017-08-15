@@ -4,20 +4,28 @@
       <tr>
           <th>EmployeeDetails</th>
           </tr>
-            <tr id="FirstNameRow">
+       <tr id="EmployeeIDRow">
+            <td>
+                <asp:Label ID="EmployeeIDLabel" runat="server" Text="EmployeeID"></asp:Label>   
+            </td>
+            <td>
+                 <asp:DropDownList ID="EmployeeIDDropDownList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="EmployeeIDDropDownList_SelectedIndexChanged"></asp:DropDownList>
+            </td>
+        </tr>
+      <tr id="First_NameRow">
         <td>
-            <asp:Label ID="FirstNameLabel" runat="server" Text="FirstName"></asp:Label>
+            <asp:Label ID="First_NameLabel" runat="server" Text="First_Name"></asp:Label>
         </td>
         <td>
-            <asp:TextBox ID="FirstNameTextBox" runat="server" Width="160px"></asp:TextBox>
+            <asp:TextBox ID="First_NameTextBox" runat="server" ></asp:TextBox>
         </td>
     </tr>
-    <tr id="LastNameRow">
+    <tr id="Last_NameRow">
         <td>
-            <asp:Label ID="LastNameLabel" runat="server" Text="LastName"></asp:Label>
+            <asp:Label ID="Last_NameLabel" runat="server" Text="Last_Name"></asp:Label>
         </td>
         <td>
-            <asp:TextBox ID="LastNameTextBox" runat="server" Width="158px"></asp:TextBox>
+            <asp:TextBox ID="Last_NameTextBox" runat="server" ></asp:TextBox>
         </td>
     </tr>
         <tr id="EmailRow">
@@ -28,12 +36,12 @@
                 <asp:TextBox ID="EmailTextBox" runat="server"></asp:TextBox>
             </td>
         </tr>
-        <tr id="MobileNumberRow">
+        <tr id="Mobile_NumberRow">
             <td>
-                <asp:Label ID="MobileNumberLabel" runat="server" Text="MobileNumber"></asp:Label>
+                <asp:Label ID="Mobile_NumberLabel" runat="server" Text="Mobile_Number"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="MobileNumberTextBox" runat="server"></asp:TextBox>
+                <asp:TextBox ID="Mobile_NumberTextBox" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr id="AlternateMobileNumberRow">
@@ -60,20 +68,20 @@
                 <asp:TextBox ID="Address2TextBox" runat="server"></asp:TextBox>
             </td>
         </tr>
-        <tr id="CurrentCountryRow">
+        <tr id="Current_CountryRow">
             <td>
-                <asp:Label ID="CurrentCountryLabel" runat="server" Text="CurrentCountry"></asp:Label>
+                <asp:Label ID="Current_CountryLabel" runat="server" Text="Current_Country"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="CurrentCountryTextBox" runat="server"></asp:TextBox>
+                <asp:TextBox ID="Current_CountryTextBox" runat="server"></asp:TextBox>
             </td>
         </tr>
-        <tr id="HomeCountryRow">
+        <tr id="Home_CountryRow">
             <td>
-                <asp:Label ID="HomeCountryLabel" runat="server" Text="HomeCountry"></asp:Label>
+                <asp:Label ID="Home_CountryLabel" runat="server" Text="Home_Country"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="HomeCountryTextBox" runat="server"></asp:TextBox>
+                <asp:TextBox ID="Home_CountryTextBox" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr id="ZipCodeRow">
@@ -89,10 +97,10 @@
                 <asp:Button ID="SaveButton" runat="server" Text="Save" OnClick="SaveButton_Click" Width="104px" />
             </td>
             <td>
-                <asp:Button ID="EditButton" runat="server" Text="Edit" Width="107px" />
+                <asp:Button ID="EditButton" runat="server" Text="Edit" Width="107px" OnClick="EditButton_Click" />
             </td>
             <td>
-                <asp:Button ID="ClearButton" runat="server" Text="Clear" Width="93px" Height="25px" />
+                <asp:Button ID="ClearButton" runat="server" Text="Clear" Width="93px" Height="25px" OnClick="ClearButton_Click" />
             </td>
 
         </tr>

@@ -17,12 +17,12 @@ namespace PioneerDataAccess
             int result = 0;
             try
             {
-                
+
                 string connectionstring = "Data Source=RAKI;Initial Catalog=PioneerEmployeeDB;" + "Integrated Security=True";
                 SqlConnection mysqlconnection = new SqlConnection(connectionstring);
                 mysqlconnection.Open();
                 string sqlemployeedetails = @"INSERT INTO Employee_Details
-                                            (First_Name,Last_Name,Email,Mobile_Number,AlternateMobileNumber,Address1,Adress2,Current_Country,Home_Country,ZipCode)VALUES('" + employee.First_Name + "'," + "" + "'" + employee.Last_Name + "'," + "" + "'" + employee.Email + "'," + "" + "" + employee.Mobile_Number + "," + "" + employee.AlternateMobileNumber + "," + "" + "'" + employee.Address1 + "'," + "'" + employee.Address2 + "'," + "" + "" + "'" + employee.Current_Country + "'," + "'" + employee.Home_Country + "'," + "" + employee.ZipCode + ")";
+                                            (First_Name,Last_Name,Email,Mobile_Number,AlternateMobileNumber,Address1,Address2,Current_Country,Home_Country,ZipCode)VALUES('" + employee.First_Name + "'," + "" + "'" + employee.Last_Name + "'," + "" + "'" + employee.Email + "'," + "" + "" + employee.Mobile_Number + "," + "" + employee.AlternateMobileNumber + "," + "" + "'" + employee.Address1 + "'," + "'" + employee.Address2 + "'," + "" + "" + "'" + employee.Current_Country + "'," + "'" + employee.Home_Country + "'," + "" + employee.ZipCode + ")";
                 SqlCommand command;
                 command = new SqlCommand(sqlemployeedetails, mysqlconnection);
                 result = command.ExecuteNonQuery();
@@ -35,7 +35,7 @@ namespace PioneerDataAccess
                     MessageBox.Show("please enter values:");
                 }
                 mysqlconnection.Close();
-                
+
 
             }
             catch (Exception ex)
@@ -43,12 +43,103 @@ namespace PioneerDataAccess
                 MessageBox.Show("An error has been occured, please contact the administartor: " + ex.Message);
             }
             return result;
-       
+        }
+        public List<int> GetEmployeeID()
+        {
 
+            List<int> empid = new List<int>();
+            try
+            {
+
+                string connectionstring = "Data Source=RAKI;Initial Catalog=PioneerEmployeeDB;" +
+                       " Integrated Security=True";
+                SqlConnection mysqlconnection = new SqlConnection(connectionstring);
+                mysqlconnection.Open();
+                string sqldetails = ("Select * FROM Employee_Details");
+
+                SqlCommand command;
+                command = new SqlCommand(sqldetails, mysqlconnection);
+                SqlDataReader employeeiddata = command.ExecuteReader();
+                while (employeeiddata.Read())
+                {
+                    empid.Add(
+                        employeeiddata.GetInt32(employeeiddata.GetOrdinal("EmployeeID"))
+
+                    );
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error has been occured please contact the administrator: " + ex.Message);
+            }
+            return empid;
+        }
+        public EmployeeDetailsModel GetEmployeeDetails(int employeeid)
+        {
+            EmployeeDetailsModel empdmodel = new EmployeeDetailsModel();
+            try
+            {
+
+                string connectionstring = "Data Source=RAKI;Initial Catalog=PioneerEmployeeDB;" +
+                       " Integrated Security=True";
+                SqlConnection mysqlconnection = new SqlConnection(connectionstring);
+                mysqlconnection.Open();
+                string sqldetails = ("Select * FROM Employee_Details WHERE EmployeeID=" + employeeid);
+                SqlCommand command;
+                command = new SqlCommand(sqldetails, mysqlconnection);
+                SqlDataReader employeedatareader = command.ExecuteReader();
+                while (employeedatareader.Read())
+                {
+                    empdmodel.EmployeeID = employeedatareader.GetInt32(employeedatareader.GetOrdinal("EmployeeID"));
+                    empdmodel.First_Name = employeedatareader.GetString(employeedatareader.GetOrdinal("First_Name"));
+                    empdmodel.Last_Name = employeedatareader.GetString(employeedatareader.GetOrdinal("Last_Name"));
+                    empdmodel.Email = employeedatareader.GetString(employeedatareader.GetOrdinal("Email"));
+                    empdmodel.Mobile_Number = employeedatareader.GetInt64(employeedatareader.GetOrdinal("Mobile_Number"));
+                    empdmodel.AlternateMobileNumber = employeedatareader.GetInt64(employeedatareader.GetOrdinal("AlternateMobileNumber"));
+                    empdmodel.Address1 = employeedatareader.GetString(employeedatareader.GetOrdinal("Address1"));
+                    empdmodel.Address2 = employeedatareader.GetString(employeedatareader.GetOrdinal("Address2"));
+                    empdmodel.Current_Country = employeedatareader.GetString(employeedatareader.GetOrdinal("Current_Country"));
+                    empdmodel.Home_Country = employeedatareader.GetString(employeedatareader.GetOrdinal("Home_Country"));
+                    empdmodel.ZipCode = employeedatareader.GetInt64(employeedatareader.GetOrdinal("ZipCode"));
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error has been occured please contact the administrator: " + ex.Message);
+            }
+            return empdmodel;
+        }
+        public int Editemployee(EmployeeDetailsModel emmodel)
+        {
+            int result = 0;
+            try
+            {
+                string connectionstring = "Data Source=RAKI;Initial Catalog=PioneerEmployeeDB;" +
+                      " Integrated Security=True";
+                SqlConnection mysqlconnection = new SqlConnection(connectionstring);
+                mysqlconnection.Open();
+                string sql = @"UPDATE Employee_Details SET First_Name='" + emmodel.First_Name + "',Last_Name='" + emmodel.Last_Name + "',Email='" + emmodel.Email + "',Mobile_Number=" + emmodel.Mobile_Number + ",AlternateMobileNumber=" + emmodel.AlternateMobileNumber + ",Address1='" + emmodel.Address1 + "',Address2='" + emmodel.Address2 + "',Current_Country='" + emmodel.Current_Country + "',Home_Country='" + emmodel.Home_Country + "',ZipCode=" + emmodel.ZipCode + " WHERE EmployeeID=" + emmodel.EmployeeID + "";
+                SqlCommand command;
+                command = new SqlCommand(sql, mysqlconnection);
+                result = command.ExecuteNonQuery();
+                if (result > 0)
+                {
+                    MessageBox.Show("Details have been updated:");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error has been occured, please contact administrator:" + ex.Message);
+            }
+            return result;
         }
     }
-    public class EducationDataAccess
-    {
+        public class EducationDataAccess
+        {
         public int SaveEducation(EducationDetailsModel education)
         {
             int result = 0;

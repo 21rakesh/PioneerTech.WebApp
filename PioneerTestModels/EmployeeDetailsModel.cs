@@ -8,6 +8,7 @@ namespace PioneerTest.Models
 {
     public class EmployeeDetailsModel
     {
+        public int EmployeeID { get; set; }
         public string First_Name { get; set; }
         public string Last_Name { get; set; }
         public string Email { get; set; }
@@ -17,6 +18,6 @@ namespace PioneerTest.Models
         public string Address2 { get; set; }
         public string Current_Country { get; set; }
         public string Home_Country { get; set; }
-        public int ZipCode { get; set; }
+        public long ZipCode { get; set; }
     }
 }
