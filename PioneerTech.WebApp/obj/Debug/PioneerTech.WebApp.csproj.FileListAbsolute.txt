@@ -32,3 +32,7 @@ C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerTe
 C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerTech.WebApp\obj\Debug\PioneerTech.WebApp.csprojResolveAssemblyReference.cache
 C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerTech.WebApp\obj\Debug\PioneerTech.WebApp.dll
 C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerTech.WebApp\obj\Debug\PioneerTech.WebApp.pdb
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerTech.WebApp\bin\PioneerDataAccess.dll
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerTech.WebApp\bin\PioneerTestModels.dll
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerTech.WebApp\bin\PioneerDataAccess.pdb
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerTech.WebApp\bin\PioneerTestModels.pdb

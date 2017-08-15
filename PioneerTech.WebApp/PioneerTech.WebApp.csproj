@@ -32,6 +32,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -56,6 +57,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -68,7 +70,7 @@
     <Content Include="Content\MainMasterPageStyleSheet.css" />
     <Content Include="packages.config" />
     <Content Include="UI\CompanyDetails.aspx" />
-    <Content Include="UI\EducationalDetails.aspx" />
+    <Content Include="UI\EducationDetails.aspx" />
     <Content Include="UI\EmployeeDetails.aspx" />
     <Content Include="UI\Home.aspx" />
     <Content Include="UI\PioneerTechMasterPage.Master" />
@@ -97,12 +99,12 @@
     <Compile Include="UI\CompanyDetails.aspx.designer.cs">
       <DependentUpon>CompanyDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UI\EducationalDetails.aspx.cs">
-      <DependentUpon>EducationalDetails.aspx</DependentUpon>
+    <Compile Include="UI\EducationDetails.aspx.cs">
+      <DependentUpon>EducationDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UI\EducationalDetails.aspx.designer.cs">
-      <DependentUpon>EducationalDetails.aspx</DependentUpon>
+    <Compile Include="UI\EducationDetails.aspx.designer.cs">
+      <DependentUpon>EducationDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\EmployeeDetails.aspx.cs">
       <DependentUpon>EmployeeDetails.aspx</DependentUpon>
@@ -143,6 +145,16 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PioneerDataAccess\PioneerDataAccess.csproj">
+      <Project>{4DE87A9C-4163-4145-B635-087D075843F1}</Project>
+      <Name>PioneerDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PioneerTestModels\PioneerTest.Models.csproj">
+      <Project>{78262EB0-92A0-4D7C-A94B-38101346F88C}</Project>
+      <Name>PioneerTest.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

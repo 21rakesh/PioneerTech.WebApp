@@ -11,15 +11,18 @@
     <form id="MainMasterPage" runat="server">
         
         <div id="Header" class="Header">
-           <h1>Pioneer Technologies Inc</h1></div>       
+           <h1>Pioneer Technologies Inc</h1></div> 
+        
         <div id="Content" class="Content"><asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder></div>
+
+
         <div id="NavigationPanel" class="NavigationPanel">
         <asp:Menu ID="Menu1" runat="server" Orientation="Vertical" CssClass="menu">
-    <Items>
+            <Items>
         <asp:MenuItem Text="Home" NavigateUrl="Home.aspx" />
         <asp:MenuItem Text="EmployeeDetails" NavigateUrl="EmployeeDetails.aspx" />
-        <asp:MenuItem Text="EducationDetails" NavigateUrl="EducationalDetails.aspx" />
+        <asp:MenuItem Text="EducationDetails" NavigateUrl="EducationDetails.aspx" />
         <asp:MenuItem Text="CompanyDetails" NavigateUrl="CompanyDetails.aspx" />
         <asp:MenuItem Text="TechnicalDetails" NavigateUrl="TechnicalDetails.aspx" />
         <asp:MenuItem Text="ProjectDetails" NavigateUrl="ProjectDetails.aspx" />

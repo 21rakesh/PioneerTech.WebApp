@@ -25,10 +25,13 @@ body{
 .Content{
     top:20%;
     height:60%;
-    width:75%;
-    background-color:white;
-    left:25%;
+    width:80%;
+    background-color:lightblue;
+    left:20%;
     position:fixed;
+
+    text-align:center;
+   
 
 }
 h1{color:orange;
@@ -62,3 +65,11 @@ nav{
 .menu ul li a:hover {
 font-weight: bold;
  }
+table, tr, td {
+    margin-left: 142px;
+    table-layout:fixed;
+  text-align:left;
+}
+th{
+    text-align:center;
+}

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using PioneerTest.Models;
-
+using System.Data;
 
 namespace PioneerDataAccess
 {
@@ -30,6 +30,10 @@ namespace PioneerDataAccess
                 {
                     MessageBox.Show("Details have been saved Successfully:");
                 }
+                else
+                {
+                    MessageBox.Show("please enter values:");
+                }
                 mysqlconnection.Close();
                 
 
@@ -50,10 +54,10 @@ namespace PioneerDataAccess
             int result = 0;
             try
             {
-                string connectionstring = "Data Source=RAKI;Initial Catalog=PioneerEmployeeDB;" + "Integrated Security=True";
+                string connectionstring = "Data Source=RAKI;Initial Catalog=PioneerEmployeeDB;"+"Integrated Security=True";
                 SqlConnection mysqlconnection = new SqlConnection(connectionstring);
                 mysqlconnection.Open();
-                string sqleducationdetails = @"INSERT INTO Education_Details(CourseType,CourseSpecialisation,YearOfPass)VALUES('" + education.CourseType + "'," + "'" + education.CourseSpecialisation + "'," + "" + education.YearOfPass + ")";
+                string sqleducationdetails = @"INSERT INTO Education_Details(CourseType,CourseSpecialisation,YearOfPass)VALUES('"+education.CourseType+"','"+ education.CourseSpecialisation+"',"+education.YearOfPass+")";
                 SqlCommand command;
                 command = new SqlCommand(sqleducationdetails, mysqlconnection);
                 result =command.ExecuteNonQuery();
@@ -84,7 +88,7 @@ namespace PioneerDataAccess
                 SqlCommand command;
                 command = new SqlCommand(sqltechnicaldetails, mysqlconnection);
                 result=command.ExecuteNonQuery();
-                if (result > 0)
+                if (result>0)
                 {
                     MessageBox.Show("Details have been saved Successfully:");
                 }
@@ -96,6 +100,7 @@ namespace PioneerDataAccess
             }
             return result;
         }
+       
     }
     public class CompanyDataAccess
     {
@@ -120,6 +125,93 @@ namespace PioneerDataAccess
             catch(Exception ex)
             {
                 MessageBox.Show("An error has been occured, please contact the administartor: " + ex.Message);
+            }
+            return result;
+        }
+        public List<int> GetEmployeeID()
+        {
+            
+            List<int> empid = new List<int>();
+            try
+            {
+                
+                string connectionstring = "Data Source=RAKI;Initial Catalog=PioneerEmployeeDB;" +
+                       " Integrated Security=True";
+                SqlConnection mysqlconnection = new SqlConnection(connectionstring);
+                mysqlconnection.Open();
+                string sqldetails = ("Select * FROM Company_Details");
+                
+                SqlCommand command;
+                command = new SqlCommand(sqldetails, mysqlconnection);
+                SqlDataReader employeeiddata = command.ExecuteReader();
+                while (employeeiddata.Read())
+                {
+                     empid.Add(
+                         employeeiddata.GetInt32(employeeiddata.GetOrdinal("EmployeeID"))
+
+                     );
+                   
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("An error has been occured please contact the administrator: " + ex.Message);
+            }
+            return empid;
+        }
+        public CompanyDetailsModel GetCompanyDetails(int employeeid)
+        {
+            CompanyDetailsModel details = new CompanyDetailsModel();
+            try
+            {
+
+                string connectionstring = "Data Source=RAKI;Initial Catalog=PioneerEmployeeDB;" +
+                       " Integrated Security=True";
+                SqlConnection mysqlconnection = new SqlConnection(connectionstring);
+                mysqlconnection.Open();
+                string sqldetails = ("Select * FROM Company_Details WHERE EmployeeID="+employeeid);
+                SqlCommand command;
+                command = new SqlCommand(sqldetails, mysqlconnection);
+                SqlDataReader companydatareader = command.ExecuteReader();
+                while (companydatareader.Read())
+                {
+                    details.EmployeeID = companydatareader.GetInt32(companydatareader.GetOrdinal("EmployeeID"));
+                    details.Employer_Name = companydatareader.GetString(companydatareader.GetOrdinal("Employer_Name"));
+                    details.Contact_Number = companydatareader.GetInt64(companydatareader.GetOrdinal("Contact_Number"));
+                    details.Location = companydatareader.GetString(companydatareader.GetOrdinal("Location"));
+                    details.Website = companydatareader.GetString(companydatareader.GetOrdinal("Website"));
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error has been occured please contact the administrator: " + ex.Message);
+            }
+            return details;
+        }
+        public int EditCompany(CompanyDetailsModel companydetails)
+        {
+            int result = 0;
+            try
+            {
+                string connectionstring = "Data Source=RAKI;Initial Catalog=PioneerEmployeeDB;" +
+                      " Integrated Security=True";
+                SqlConnection mysqlconnection = new SqlConnection(connectionstring);
+                mysqlconnection.Open();
+                string sql = @"UPDATE Company_Details SET Employer_Name='"+companydetails.Employer_Name+"',Contact_Number="+companydetails.Contact_Number+",Location='"+companydetails.Location+"',Website='"+companydetails.Website+"' WHERE EmployeeID="+companydetails.EmployeeID+"";
+                SqlCommand command;
+                command = new SqlCommand(sql, mysqlconnection);
+                result = command.ExecuteNonQuery();
+                if(result>0)
+                {
+                    MessageBox.Show("Details have been updated:");
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error has been occured, please contact administrator:" +ex.Message);
             }
             return result;
         }
@@ -152,7 +244,7 @@ namespace PioneerDataAccess
             return result;
         }
     } 
-
+   
 
 }
 
