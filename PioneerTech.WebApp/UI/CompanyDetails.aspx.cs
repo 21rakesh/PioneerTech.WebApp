@@ -81,5 +81,13 @@ namespace PioneerTech.WebApp.UI
             WebsiteTextBox.Text = companymodel.Website;
 
        }
+
+        protected void CompanyDetailsClear_Click(object sender, EventArgs e)
+        {
+            Employer_NameTextBox.Text = string.Empty;
+            Contact_NumberTextBox.Text = string.Empty;
+            LocationTextBox.Text = string.Empty;
+            WebsiteTextBox.Text = string.Empty;
+        }
     }
 }

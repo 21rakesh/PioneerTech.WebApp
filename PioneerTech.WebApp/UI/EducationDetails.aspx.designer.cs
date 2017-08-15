@@ -13,6 +13,24 @@ namespace PioneerTech.WebApp.UI {
     public partial class EducationalDetails {
         
         /// <summary>
+        /// EmployeeIDLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label EmployeeIDLabel;
+        
+        /// <summary>
+        /// EmployeeIDDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList EmployeeIDDropDownList;
+        
+        /// <summary>
         /// CourseTypeLabel control.
         /// </summary>
         /// <remarks>
@@ -40,13 +58,13 @@ namespace PioneerTech.WebApp.UI {
         protected global::System.Web.UI.WebControls.Label CourseSpecialisationLabel;
         
         /// <summary>
-        /// CoursespecialisationTextBox control.
+        /// CourseSpecialisationTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CoursespecialisationTextBox;
+        protected global::System.Web.UI.WebControls.TextBox CourseSpecialisationTextBox;
         
         /// <summary>
         /// YearOfPassLabel control.

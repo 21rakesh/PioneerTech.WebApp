@@ -73,6 +73,88 @@ namespace PioneerDataAccess
             }
             return result;
         }
+        public List<int> GetEmployeeID()
+        {
+
+            List<int> empid = new List<int>();
+            
+
+                string connectionstring = "Data Source=RAKI;Initial Catalog=PioneerEmployeeDB;" +
+                       " Integrated Security=True";
+                SqlConnection mysqlconnection = new SqlConnection(connectionstring);
+                mysqlconnection.Open();
+                string sqldetails = ("Select * FROM Education_Details");
+
+                SqlCommand command;
+                command = new SqlCommand(sqldetails, mysqlconnection);
+                SqlDataReader employeeiddata = command.ExecuteReader();
+                while (employeeiddata.Read())
+                {
+                    empid.Add(
+                        employeeiddata.GetInt32(employeeiddata.GetOrdinal("EmployeeID"))
+
+                    );
+
+                }
+
+            return empid;
+        }
+        public EducationDetailsModel GetEducationDetails(int employeeid)
+        {
+            EducationDetailsModel detailsmodel = new EducationDetailsModel();
+            try
+            {
+
+                string connectionstring = "Data Source=RAKI;Initial Catalog=PioneerEmployeeDB;" +
+                       " Integrated Security=True";
+                SqlConnection mysqlconnection = new SqlConnection(connectionstring);
+                mysqlconnection.Open();
+                string sqldetails = ("Select * FROM Education_Details WHERE EmployeeID=" + employeeid);
+                SqlCommand command;
+                command = new SqlCommand(sqldetails, mysqlconnection);
+                SqlDataReader educationdatareader = command.ExecuteReader();
+                while (educationdatareader.Read())
+                {
+                    detailsmodel.EmployeeID = educationdatareader.GetInt32(educationdatareader.GetOrdinal("EmployeeID"));
+                    detailsmodel.CourseType = educationdatareader.GetString(educationdatareader.GetOrdinal("CourseType"));
+                    detailsmodel.CourseSpecialisation = educationdatareader.GetString(educationdatareader.GetOrdinal("CourseSpecialisation"));
+                    detailsmodel.YearOfPass = educationdatareader.GetInt32(educationdatareader.GetOrdinal("YearOfPass"));
+                    
+                   
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error has been occured please contact the administrator: " + ex.Message);
+            }
+            return detailsmodel;
+        }
+        public int Editeducation(EducationDetailsModel edumodel)
+        {
+            int result = 0;
+            try
+            {
+                string connectionstring = "Data Source=RAKI;Initial Catalog=PioneerEmployeeDB;" +
+                      " Integrated Security=True";
+                SqlConnection mysqlconnection = new SqlConnection(connectionstring);
+                mysqlconnection.Open();
+                string sql = @"UPDATE Education_Details SET CourseType='" + edumodel.CourseType + "',CourseSpecialisation='" + edumodel.CourseSpecialisation + "',YearOfPass=" + edumodel.YearOfPass +" WHERE EmployeeID=" +edumodel.EmployeeID + "";
+                SqlCommand command;
+                command = new SqlCommand(sql, mysqlconnection);
+                result = command.ExecuteNonQuery();
+                if (result > 0)
+                {
+                    MessageBox.Show("Details have been updated:");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error has been occured, please contact administrator:" + ex.Message);
+            }
+            return result;
+        }
     }
     public class TechnicalDataAccess
     {

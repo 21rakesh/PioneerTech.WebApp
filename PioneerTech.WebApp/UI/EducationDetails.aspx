@@ -4,6 +4,14 @@
         <tr>
            <th>EducationDetails</th>
         </tr>
+         <tr id="EmployeeIDRow">
+            <td>
+                <asp:Label ID="EmployeeIDLabel" runat="server" Text="EmployeeID"></asp:Label>   
+            </td>
+            <td>
+                 <asp:DropDownList ID="EmployeeIDDropDownList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="EmployeeIDDropDownList_SelectedIndexChanged"></asp:DropDownList>
+            </td>
+        </tr>
         <tr id="CourseTypeRow">
             <td>
                 <asp:Label ID="CourseTypeLabel" runat="server" Text="CourseType"></asp:Label>
@@ -17,7 +25,7 @@
                 <asp:Label ID="CourseSpecialisationLabel" runat="server" Text="Coursespecialisation"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="CoursespecialisationTextBox" runat="server"></asp:TextBox>
+                <asp:TextBox ID="CourseSpecialisationTextBox" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr id="YearOfPassRow">
@@ -33,10 +41,10 @@
                 <asp:Button ID="EducationalDetailsSave" runat="server" Text="Save" OnClick="EducationalDetailsSave_Click" />
             </td>
             <td>
-                <asp:Button ID="EducationalDetailsEdit" runat="server" Text="Edit" />
+                <asp:Button ID="EducationalDetailsEdit" runat="server" Text="Edit" OnClick="EducationalDetailsEdit_Click" />
             </td>
             <td>
-                <asp:Button ID="EducationalDetailsClear" runat="server" Text="Clear" />
+                <asp:Button ID="EducationalDetailsClear" runat="server" Text="Clear" OnClick="EducationalDetailsClear_Click" />
             </td>
         </tr>
     </table>
