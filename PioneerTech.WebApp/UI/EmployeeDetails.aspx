@@ -18,6 +18,7 @@
         </td>
         <td>
             <asp:TextBox ID="First_NameTextBox" runat="server" ></asp:TextBox>
+            <asp:RequiredFieldValidator ID="First_NameRequiredFieldValidator" runat="server" ErrorMessage="Please enter first name" ControlToValidate="First_NameTextBox" ForeColor="#CC0000"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr id="Last_NameRow">
@@ -26,6 +27,7 @@
         </td>
         <td>
             <asp:TextBox ID="Last_NameTextBox" runat="server" ></asp:TextBox>
+            <asp:RequiredFieldValidator ID="Last_NameRequiredFieldValidator" runat="server" ErrorMessage="Please enter last name" ControlToValidate="Last_NameTextBox" ForeColor="#CC0000"></asp:RequiredFieldValidator>
         </td>
     </tr>
         <tr id="EmailRow">
@@ -34,6 +36,8 @@
             </td>
             <td>
                 <asp:TextBox ID="EmailTextBox" runat="server"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="EmailRegularExpressionValidator" runat="server" ErrorMessage="Please enter valid email id" ControlToValidate="EmailTextBox"
+                    SetFocusOnError="True" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="#CC0000"></asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr id="Mobile_NumberRow">
@@ -42,6 +46,7 @@
             </td>
             <td>
                 <asp:TextBox ID="Mobile_NumberTextBox" runat="server"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="Mobile_NumberRegularExpressionValidator" runat="server" ErrorMessage="Please enter a valid mobile number" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}" ForeColor="#CC0000" ControlToValidate="Mobile_NumberTextBox"></asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr id="AlternateMobileNumberRow">
@@ -50,6 +55,7 @@
             </td>
             <td>
                 <asp:TextBox ID="AlternateMobileNumberTextBox" runat="server"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="AlternateMobileNumberRegularExpressionValidator" runat="server" ErrorMessage="Please enter a valid mobile number" ForeColor="#CC0000" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}" ControlToValidate="AlternateMobileNumberTextBox"></asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr id="Address1Row">
@@ -90,6 +96,7 @@
             </td>
             <td>
                 <asp:TextBox ID="ZipCodeTextBox" runat="server"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="ZipCodeRegularExpressionValidator" runat="server" ErrorMessage="Please enter valid ZipCode" ControlToValidate="ZipCodeTextBox" ForeColor="#CC0000" ValidationExpression="\d{5}(-\d{4})?"></asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>

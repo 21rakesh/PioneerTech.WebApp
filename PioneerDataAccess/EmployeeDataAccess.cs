@@ -138,7 +138,7 @@ namespace PioneerDataAccess
             return result;
         }
     }
-        public class EducationDataAccess
+    public class EducationDataAccess
         {
         public int SaveEducation(EducationDetailsModel education)
         {

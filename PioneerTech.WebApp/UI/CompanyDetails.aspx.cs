@@ -25,6 +25,7 @@ namespace PioneerTech.WebApp.UI
                 i++;
             }
             }
+            UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
 
         protected void CompanyDetailsSave_Click(object sender, EventArgs e)

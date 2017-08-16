@@ -10,6 +10,7 @@
             </td>
             <td>
                  <asp:DropDownList ID="EmployeeIDDropDownList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="EmployeeIDDropDownList_SelectedIndexChanged"></asp:DropDownList>
+
             </td>
         </tr>
         <tr id="CourseTypeRow">
@@ -18,6 +19,7 @@
             </td>
             <td>
                 <asp:TextBox ID="CourseTypeTextBox" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="CourseTypeRequiredFieldValidator" runat="server" ErrorMessage="Please enter the CourseType" ControlToValidate="CourseTypeTextBox" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr id="CourseSpecialisationRow">
@@ -26,6 +28,7 @@
             </td>
             <td>
                 <asp:TextBox ID="CourseSpecialisationTextBox" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="CourseSpecialisationRequiredFieldValidator" runat="server" ErrorMessage="Please enter the CourseSpecialisation" ControlToValidate="CourseSpecialisationTextBox" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr id="YearOfPassRow">
@@ -34,6 +37,7 @@
             </td>
             <td>
                 <asp:TextBox ID="YearOfPassTextBox" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="YearOfPassRequiredFieldValidator" runat="server" ErrorMessage="Please enter the YearOfPass" ControlToValidate="YearOfPassTextBox" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>

@@ -24,7 +24,9 @@ namespace PioneerTech.WebApp.UI
                     EmployeeIDDropDownList.Items.Insert(i, new ListItem(EmpID.ToString()));
                     i++;
                 }
+                
             }
+            UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
 
         protected void SaveButton_Click(object sender, EventArgs e)

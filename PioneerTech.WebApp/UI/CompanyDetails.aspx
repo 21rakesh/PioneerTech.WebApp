@@ -11,6 +11,7 @@
             </td>
             <td>
                 <asp:TextBox ID="Employer_NameTextBox" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="Employer_NameRequiredFieldValidator" runat="server" ErrorMessage="Please enter the employer name" ControlToValidate="Contact_NumberTextBox" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr id="EmployeeIDRow">
@@ -27,6 +28,8 @@
             </td>
             <td>
                 <asp:TextBox ID="Contact_NumberTextBox" runat="server"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="Contact_NumberRegularExpressionValidator" runat="server" ErrorMessage="Please enter valid contact number" ControlToValidate="Contact_NumberTextBox" ForeColor="#CC0000" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}"></asp:RegularExpressionValidator>
+                <asp:RequiredFieldValidator ID="Contact_NumberRequiredFieldValidator" runat="server" ErrorMessage="Please enter contact number" ControlToValidate="Contact_NumberTextBox" ForeColor="#CC0000"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr id="LocationRow">
