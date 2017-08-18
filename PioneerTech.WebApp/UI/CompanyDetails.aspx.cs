@@ -35,17 +35,20 @@ namespace PioneerTech.WebApp.UI
                 CompanyDetailsModel companymodel = new CompanyDetailsModel()
                 {
                     Employer_Name=Employer_NameTextBox.Text,
-                    //EmployeeID=Convert.ToInt32(EmployeeIDDropDownList.DataTextField),
-                    Contact_Number=Convert.ToInt64(Contact_NumberTextBox.Text),
+                    Contact_Number=Contact_NumberTextBox.Text,
                     Location=LocationTextBox.Text,
                     Website=WebsiteTextBox.Text,
                 };
                 CompanyDataAccess companydata = new CompanyDataAccess();
-                companydata.SaveCompany(companymodel);
+                string cmpdata=companydata.SaveCompany(companymodel);
+                if(cmpdata.Equals("success"))
+                {
+                    Response.Write("<script>alert('Details have been saved successfully!');</script>");
+                }
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Please enter the values: " + ex.Message);
+                Response.Write("<script>alert('Please enter the values!" + ex.Message + "');</script>");
             }
         }
 
@@ -58,16 +61,20 @@ namespace PioneerTech.WebApp.UI
 
                     Employer_Name = Employer_NameTextBox.Text,
                     EmployeeID = Convert.ToInt32(EmployeeIDDropDownList.SelectedValue),
-                    Contact_Number = Convert.ToInt64(Contact_NumberTextBox.Text),
+                    Contact_Number =Contact_NumberTextBox.Text,
                     Location = LocationTextBox.Text,
                     Website = WebsiteTextBox.Text,
                 };
                 CompanyDataAccess access = new CompanyDataAccess();
-                access.EditCompany(model);
+                string cmpaccess=access.EditCompany(model);
+                if(cmpaccess.Equals("success"))
+                {
+                    Response.Write("<script>alert('Details have been updated successfully!');</script>");
+                }
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Please enter the values: " + ex.Message);
+                Response.Write("<script>alert('Please enter the values!" + ex.Message + "');</script>");
             }
         }
 
@@ -77,7 +84,7 @@ namespace PioneerTech.WebApp.UI
             CompanyDataAccess companyaccess = new CompanyDataAccess();
             companymodel = companyaccess.GetCompanyDetails(Convert.ToInt32(EmployeeIDDropDownList.SelectedValue));
             Employer_NameTextBox.Text = companymodel.Employer_Name;
-            Contact_NumberTextBox.Text = companymodel.Contact_Number.ToString();
+            Contact_NumberTextBox.Text = companymodel.Contact_Number;
             LocationTextBox.Text = companymodel.Location;
             WebsiteTextBox.Text = companymodel.Website;
 

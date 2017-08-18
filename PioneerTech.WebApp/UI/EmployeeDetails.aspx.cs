@@ -38,8 +38,8 @@ namespace PioneerTech.WebApp.UI
                     First_Name = First_NameTextBox.Text,
                     Last_Name = Last_NameTextBox.Text,
                     Email = EmailTextBox.Text,
-                    Mobile_Number = Convert.ToInt64(Mobile_NumberTextBox.Text),
-                    AlternateMobileNumber = Convert.ToInt64(AlternateMobileNumberTextBox.Text),
+                    Mobile_Number =Mobile_NumberTextBox.Text,
+                    AlternateMobileNumber = AlternateMobileNumberTextBox.Text,
                     Address1 = Address1TextBox.Text,
                     Address2 = Address2TextBox.Text,
                     Current_Country = Current_CountryTextBox.Text,
@@ -47,11 +47,17 @@ namespace PioneerTech.WebApp.UI
                     ZipCode = Convert.ToInt64(ZipCodeTextBox.Text),
                 };
                 EmployeeDataAccess employeedata = new EmployeeDataAccess();
-                employeedata.SaveEmployee(employee);
+                string emdata=employeedata.SaveEmployee(employee);
+                if(emdata.Equals("success"))
+                {
+                    Response.Write("<script>alert('Details have been saved successfully!');</script>");
+                }
+                
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Please enter the values: " +ex.Message);
+                //MessageBox.Show("Please enter the values: " +ex.Message);
+               Response.Write("<script>alert('Please enter the values!" + ex.Message + "');</script>");
             }
            
         }
@@ -66,8 +72,8 @@ namespace PioneerTech.WebApp.UI
                     First_Name = First_NameTextBox.Text,
                     Last_Name = Last_NameTextBox.Text,
                     Email=EmailTextBox.Text,
-                    Mobile_Number = Convert.ToInt64(Mobile_NumberTextBox.Text),
-                    AlternateMobileNumber = Convert.ToInt64(AlternateMobileNumberTextBox.Text),
+                    Mobile_Number = Mobile_NumberTextBox.Text,
+                    AlternateMobileNumber = AlternateMobileNumberTextBox.Text,
                     Address1 = Address1TextBox.Text,
                     Address2 = Address2TextBox.Text,
                     Current_Country = Current_CountryTextBox.Text,
@@ -75,11 +81,16 @@ namespace PioneerTech.WebApp.UI
                     ZipCode = Convert.ToInt64(ZipCodeTextBox.Text),
                 };
                 EmployeeDataAccess empeditaccess = new EmployeeDataAccess();
-                empeditaccess.Editemployee(empeditmodels);
+               string emedit=empeditaccess.Editemployee(empeditmodels);
+                if(emedit.Equals("success"))
+                {
+                    Response.Write("<script>alert('Details have been updated successfully!');</script>");
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Details have been updated: " + ex.Message);
+                //MessageBox.Show("Details have been updated: " + ex.Message);
+                Response.Write("<script>alert('Please enter the values!"+ex.Message+"');</script>");
             }
 
         }
@@ -107,8 +118,8 @@ namespace PioneerTech.WebApp.UI
             First_NameTextBox.Text = emdatamodels.First_Name;
             Last_NameTextBox.Text = emdatamodels.Last_Name;
             EmailTextBox.Text = emdatamodels.Email;
-            Mobile_NumberTextBox.Text = emdatamodels.Mobile_Number.ToString();
-            AlternateMobileNumberTextBox.Text = emdatamodels.AlternateMobileNumber.ToString();
+            Mobile_NumberTextBox.Text = emdatamodels.Mobile_Number;
+            AlternateMobileNumberTextBox.Text = emdatamodels.AlternateMobileNumber;
             Address1TextBox.Text = emdatamodels.Address1;
             Address2TextBox.Text = emdatamodels.Address2;
             Current_CountryTextBox.Text = emdatamodels.Current_Country;

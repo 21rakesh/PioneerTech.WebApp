@@ -1,0 +1,14 @@
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerTestModels\bin\Release\PioneerTestModels.dll
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerTestModels\bin\Release\PioneerTestModels.pdb
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerTestModels\obj\Release\PioneerTest.Models.csprojResolveAssemblyReference.cache
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerTestModels\obj\Release\PioneerTestModels.dll
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerTestModels\obj\Release\PioneerTestModels.pdb
+C:\Users\raki\Documents\Visual Studio 2017\Projects\PioneerTech.WebApp\PioneerTest.Models\bin\Release\PioneerTest.Models.dll
+C:\Users\raki\Documents\Visual Studio 2017\Projects\PioneerTech.WebApp\PioneerTest.Models\bin\Release\PioneerTest.Models.pdb
+C:\Users\raki\Documents\Visual Studio 2017\Projects\PioneerTech.WebApp\PioneerTest.Models\bin\Release\PioneerDataAccess.dll
+C:\Users\raki\Documents\Visual Studio 2017\Projects\PioneerTech.WebApp\PioneerTest.Models\bin\Release\PioneerTestModels.dll
+C:\Users\raki\Documents\Visual Studio 2017\Projects\PioneerTech.WebApp\PioneerTest.Models\bin\Release\PioneerDataAccess.pdb
+C:\Users\raki\Documents\Visual Studio 2017\Projects\PioneerTech.WebApp\PioneerTest.Models\bin\Release\PioneerTestModels.pdb
+C:\Users\raki\Documents\Visual Studio 2017\Projects\PioneerTech.WebApp\PioneerTest.Models\obj\Release\PioneerTest.Models.csprojResolveAssemblyReference.cache
+C:\Users\raki\Documents\Visual Studio 2017\Projects\PioneerTech.WebApp\PioneerTest.Models\obj\Release\PioneerTest.Models.dll
+C:\Users\raki\Documents\Visual Studio 2017\Projects\PioneerTech.WebApp\PioneerTest.Models\obj\Release\PioneerTest.Models.pdb

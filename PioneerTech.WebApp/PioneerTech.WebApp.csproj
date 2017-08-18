@@ -74,6 +74,7 @@
     <Content Include="UI\EmployeeDetails.aspx" />
     <Content Include="UI\Home.aspx" />
     <Content Include="UI\PioneerTechMasterPage.Master" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -148,11 +149,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PioneerDataAccess\PioneerDataAccess.csproj">
-      <Project>{4DE87A9C-4163-4145-B635-087D075843F1}</Project>
+      <Project>{4de87a9c-4163-4145-b635-087d075843f1}</Project>
       <Name>PioneerDataAccess</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PioneerTestModels\PioneerTest.Models.csproj">
-      <Project>{78262EB0-92A0-4D7C-A94B-38101346F88C}</Project>
+    <ProjectReference Include="..\PioneerTest.Models\PioneerTest.Models.csproj">
+      <Project>{78262eb0-92a0-4d7c-a94b-38101346f88c}</Project>
       <Name>PioneerTest.Models</Name>
     </ProjectReference>
   </ItemGroup>

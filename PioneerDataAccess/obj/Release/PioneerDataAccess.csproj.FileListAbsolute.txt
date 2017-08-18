@@ -2,3 +2,10 @@ C:\Users\raki\documents\visual studio 2017\Projects\PioneerTestConsultancySystem
 C:\Users\raki\documents\visual studio 2017\Projects\PioneerTestConsultancySystem\PioneerDataAccess\bin\Release\PioneerDataAccess.pdb
 C:\Users\raki\documents\visual studio 2017\Projects\PioneerTestConsultancySystem\PioneerDataAccess\obj\Release\PioneerDataAccess.dll
 C:\Users\raki\documents\visual studio 2017\Projects\PioneerTestConsultancySystem\PioneerDataAccess\obj\Release\PioneerDataAccess.pdb
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerDataAccess\bin\Release\PioneerDataAccess.dll
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerDataAccess\bin\Release\PioneerDataAccess.pdb
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerDataAccess\obj\Release\PioneerDataAccess.csprojResolveAssemblyReference.cache
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerDataAccess\obj\Release\PioneerDataAccess.dll
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerDataAccess\obj\Release\PioneerDataAccess.pdb
+C:\Users\raki\Documents\Visual Studio 2017\Projects\PioneerTech.WebApp\PioneerDataAccess\bin\Release\PioneerTest.Models.dll
+C:\Users\raki\Documents\Visual Studio 2017\Projects\PioneerTech.WebApp\PioneerDataAccess\bin\Release\PioneerTest.Models.pdb

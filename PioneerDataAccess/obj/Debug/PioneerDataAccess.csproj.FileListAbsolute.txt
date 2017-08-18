@@ -5,10 +5,10 @@ C:\Users\raki\documents\visual studio 2017\Projects\PioneerTestConsultancySystem
 C:\Users\raki\documents\visual studio 2017\Projects\PioneerTestConsultancySystem\PioneerDataAccess\obj\Debug\PioneerDataAccess.pdb
 C:\Users\raki\documents\visual studio 2017\Projects\PioneerTestConsultancySystem\PioneerDataAccess\bin\Debug\PioneerTestModels.dll
 C:\Users\raki\documents\visual studio 2017\Projects\PioneerTestConsultancySystem\PioneerDataAccess\bin\Debug\PioneerTestModels.pdb
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerDataAccess\obj\Debug\PioneerDataAccess.csprojResolveAssemblyReference.cache
 C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerDataAccess\bin\Debug\PioneerDataAccess.dll
 C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerDataAccess\bin\Debug\PioneerDataAccess.pdb
-C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerDataAccess\bin\Debug\PioneerTestModels.dll
-C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerDataAccess\bin\Debug\PioneerTestModels.pdb
-C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerDataAccess\obj\Debug\PioneerDataAccess.csprojResolveAssemblyReference.cache
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerDataAccess\bin\Debug\PioneerTest.Models.dll
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerDataAccess\bin\Debug\PioneerTest.Models.pdb
 C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerDataAccess\obj\Debug\PioneerDataAccess.dll
 C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerDataAccess\obj\Debug\PioneerDataAccess.pdb

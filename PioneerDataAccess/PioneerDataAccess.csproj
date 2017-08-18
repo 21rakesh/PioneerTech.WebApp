@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PioneerTestModels">
-      <HintPath>..\PioneerTestModels\bin\Debug\PioneerTestModels.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
@@ -47,6 +44,12 @@
   <ItemGroup>
     <Compile Include="EmployeeDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PioneerTest.Models\PioneerTest.Models.csproj">
+      <Project>{78262eb0-92a0-4d7c-a94b-38101346f88c}</Project>
+      <Name>PioneerTest.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

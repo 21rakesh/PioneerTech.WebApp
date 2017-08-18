@@ -39,11 +39,16 @@ namespace PioneerTech.WebApp.UI
                     YearOfPass=Convert.ToInt32(YearOfPassTextBox.Text),
                 };
                 EducationDataAccess educationdata = new EducationDataAccess();
-                educationdata.SaveEducation(education);
+                string edsave=educationdata.SaveEducation(education);
+                if(edsave.Equals("success"))
+                {
+                    Response.Write("<script>alert('Details have been saved successfully!');</script>");
+                }
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Please enter the values: " + ex.Message);
+                //MessageBox.Show("Please enter the values: " + ex.Message);
+                Response.Write("<script>alert('Please enter the values!" + ex.Message + "');</script>");
             }
         }
 
@@ -70,11 +75,16 @@ namespace PioneerTech.WebApp.UI
                     YearOfPass=Convert.ToInt32(YearOfPassTextBox.Text),
                 };
                 EducationDataAccess cmpaccess = new EducationDataAccess();
-                cmpaccess.Editeducation(edmodel);
+                string ededit=cmpaccess.Editeducation(edmodel);
+                if(ededit.Equals("success"))
+                {
+                    Response.Write("<script>alert('Details have been updated successfully!');</script>");
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Please enter the values: " + ex.Message);
+                //MessageBox.Show("Please enter the values: " + ex.Message);
+                Response.Write("<script>alert('Please enter the values!" + ex.Message + "');</script>");
             }
         }
 

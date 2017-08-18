@@ -1,0 +1,12 @@
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTestConsultancySystem\PioneerTestModels\bin\Debug\PioneerTestModels.dll
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTestConsultancySystem\PioneerTestModels\bin\Debug\PioneerTestModels.pdb
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTestConsultancySystem\PioneerTestModels\obj\Debug\PioneerTestModels.csprojResolveAssemblyReference.cache
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTestConsultancySystem\PioneerTestModels\obj\Debug\PioneerTestModels.dll
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTestConsultancySystem\PioneerTestModels\obj\Debug\PioneerTestModels.pdb
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerTestModels\bin\Debug\PioneerTestModels.dll
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerTestModels\bin\Debug\PioneerTestModels.pdb
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerTestModels\bin\Debug\PioneerDataAccess.dll
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerTestModels\bin\Debug\PioneerDataAccess.pdb
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerTestModels\obj\Debug\PioneerTestModels.csprojResolveAssemblyReference.cache
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerTestModels\obj\Debug\PioneerTestModels.dll
+C:\Users\raki\documents\visual studio 2017\Projects\PioneerTech.WebApp\PioneerTestModels\obj\Debug\PioneerTestModels.pdb

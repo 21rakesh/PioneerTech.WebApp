@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PioneerTech.WebApp.Tests", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PioneerDataAccess", "PioneerDataAccess\PioneerDataAccess.csproj", "{4DE87A9C-4163-4145-B635-087D075843F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PioneerTest.Models", "PioneerTestModels\PioneerTest.Models.csproj", "{78262EB0-92A0-4D7C-A94B-38101346F88C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PioneerTest.Models", "PioneerTest.Models\PioneerTest.Models.csproj", "{78262EB0-92A0-4D7C-A94B-38101346F88C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
