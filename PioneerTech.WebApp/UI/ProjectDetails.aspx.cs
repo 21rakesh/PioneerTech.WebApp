@@ -16,7 +16,7 @@ namespace PioneerTech.WebApp.UI
         {
             if (!IsPostBack)
             {
-                CompanyDataAccess obj = new CompanyDataAccess();
+                ProjectDataAccess obj = new ProjectDataAccess();
                 List<int> EmpIDList = obj.GetEmployeeID();
                 int i = 0;
                 foreach (int EmpID in EmpIDList)
